@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  background-color: rgb(79, 75, 94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+p {
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.weatherWindow {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.panel {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 32vw;
+  height: 18vw;
+  background-color: rgb(44, 44, 44);
+  border-radius: 1.8vw;
+  transition: ease-in-out 200ms;
+}
+.todayPanelImage {
+  width: 15vw;
+  height: 19vw;
+  border-radius: 2vw;
+  background: url(./winds.jpg);
+  background-size: cover;
+  transition: ease-in-out 200ms;
+  z-index: 2;
+}
+.todayPanel {
+  width: 15vw;
+  height: 19vw;
+  border-radius: 1.8vw;
+  background: linear-gradient(
+    146deg,
+    rgba(38, 192, 227, 1) 0%,
+    rgba(43, 191, 224, 0.3267682072829131) 100%
+  );
+  /* padding: 2vw; */
+  font-family: monospace;
+  transition: ease-in-out 200ms;
+  z-index: 5;
+  user-select: none;
+}
+.todayPanel:hover {
+  /* transform: skew(-0.0001deg, -1deg); */
+  scale: 1.005;
+  box-shadow: -1.5vw -1.5vw 1.9vw 0 rgba(0, 0, 0, 0.8);
+  /* width: 15.5vw; */
+  cursor: pointer;
+}
+.todayPanelImage:hover {
+  scale: 1.05;
+  /* transform: skew(-2deg, -1deg); */
+  /* width: 15vw; */
+}
+.panelText {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 1vw 1vw 0 1vw;
+  color: aliceblue;
+}
+.panelText h1 {
+  font-size: 1.7vw;
+}
+.panelText p {
+  font-size: 1vw;
+}
+.panelText a {
+  font-size: 0.9vw;
+  margin-top: 0.3vw;
+}
+.panelInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
+  gap: 0.4vw;
+  padding: 0 1vw 1vw 1vw;
+  color: aliceblue;
+}
+.panelInfo h1 {
+  font-size: 2.5vw;
+}
+.panelInfo h2 {
+  font-size: 1.3vw;
+}
+.weatherNews {
+  width: 14vw;
+  height: 15vw;
+  margin: 0 1.4vw 0 1.4vw;
+  transition: ease-in-out 500ms;
+}
+.weatherCharacteristic {
+  display: flex;
+  color: aliceblue;
+  justify-content: space-between;
+  font-family: monospace;
+  margin-bottom: 0.3vw;
+  user-select: none;
+}
+.weatherCharacteristic h1 {
+  font-size: 1vw;
+}
+.weatherCharacteristic p {
+  font-size: 0.8vw;
+}
+.weatherCard {
+  width: 3.5vw;
+  height: 6vw;
+  background-color: rgb(60, 60, 60);
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: aliceblue;
+  font-family: monospace;
+  transition: all 150ms;
+}
+
+.weatherCard:hover {
+  background-color: rgb(151, 151, 151);
+  scale: 1.05;
+}
+
+.weatherDays {
+  display: flex;
+  margin-top: 1.4vw;
+  gap: 0.05vw;
+}
+.weatherCard img {
+  width: 1.8vw;
+}
+.weatherCard p {
+  margin: 0.3vw 0 0.3vw 0;
+  font-size: 0.9vw;
+}
+.weatherCard h2 {
+  font-size: 1.1vw;
+}
+.weatherButton {
+  margin-top: 1.4vw;
+  width: 14vw;
+  height: 1.9vw;
+  color: aliceblue;
+  background: linear-gradient(
+    100deg,
+    rgba(38, 192, 227, 1) 27%,
+    rgba(21, 136, 237, 0.62) 100%
+  );
+  border: 0;
+  border-radius: 1vw;
+  transition: ease-in-out 45ms;
+}
+.weatherButton h1 {
+  font-size: 1vw;
+  font-family: monospace;
+  user-select: none;
+}
+
+.weatherButton:hover {
+  scale: 1.01;
+  box-shadow: 0.3vw 0.5vw 1.5vw 0 rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#location-div{
+  width: 15vw;
+  padding: 0.8vw 0 0.7vw 0.5vw;
+  background-color: rgb(44, 44, 44);
+  border-radius: 1vw 1vw 1vw 1vw;
+  display: none;
+  /* display: flex; */
+}
+#change-location-inp{
+  width: 13vw;
+  background-color: aliceblue;
+  border-radius: 2vw;
+  border: 0;
+  color: black;
+  height: 1.7vw;
+}
+#change-location-but{
+  margin-top: 0.5vw;
+  width: 5vw;
+  height: 1.5vw;
+  border-radius: 1vw;
+  font-size: 0.7vw;
+  background-color: rgb(21, 21, 21);
+  color: aliceblue;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+  body{
+    zoom: 2.8;
+    height: 50vw;
+  }
+  #location-div{
+    padding: 0 0 0.7vw 0.5vw;
+  }
+  #change-location-inp{
+    /* width: 10vw; */
+    border-radius: 1.5vw;
+    height: 1.4vw;
+    font-size: 0.8vw;
+  }
+  #change-location-but{
+    border: 0;
+  }
+  /* .weatherWindow {
+    height: 100vh;
+  }
+  .panel {
+    width: 150vw;
+    height: 38vw;
+    border-radius: 1.8vw;
+  }
+  .todayPanelImage {
+    width: 45vw;
+    height: 55vw;
+    border-radius: 2vw;
+    background-size: cover;
+  }
+  .todayPanel {
+    width: 45vw;
+    height: 55vw;
+    border-radius: 1.8vw;
+  }
+  .weatherNews {
+    width: 96vw;
+    height: 50vw;
+    margin: 0 1.4vw 0 1.4vw;
+    transition: ease-in-out 500ms;
+  } */
+}

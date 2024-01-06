@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather window</title>
+  </head>
+  <body>
+    <section class="weatherWindow">
+      <div class="panel" id="Panel">
+        <!--  -->
+        <div
+          class="todayPanelImage"
+          style="background-color: rgb(32, 154, 191)"
+        >
+          <div class="todayPanel" id="TodayPanel">
+            <!--  -->
+            <div class="panelText">
+              <h1 id="day"></h1>
+              <p id="date"></p>
+              <p id="weather-city">Please, enter a city name</p>
+            </div>
+            <!--  -->
+            <div class="panelInfo">
+              <img
+                src=""
+                id="weather-status-img"
+                alt=""
+                style="width: 3vw"
+              />
+              <h1 id="weather-temperature"></h1>
+              <h2 id="weather-status"></h2>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+        <!--  -->
+        <div class="weatherNews" id="WeatherNews">
+          <!--  -->
+          <div class="weatherCharacteristic" id="wC1">
+            <h1>CLOUDS</h1>
+            <p id="weather-clouds">Lodaing</p>
+          </div>
+          <div class="weatherCharacteristic" id="wC2">
+            <h1>HUMIDITY</h1>
+            <p id="weather-humidity">Loading</p>
+          </div>
+          <div class="weatherCharacteristic" id="wC3">
+            <h1>WIND</h1>
+            <p id = "weather-wind">Lodaing</p>
+          </div>
+          <!--  -->
+          <div class="weatherDays">
+            <a href="./indexx.html" target="_blank">
+              <div class="weatherCard">
+                <img id="weather-icon2" src="" alt="" />
+                <p id="day2">Load</p>
+                <h2 id="tempday2">***</h2>
+              </div>
+            </a>
+            <a href="./indexx.html" target="_blank">
+              <div class="weatherCard">
+                <img id="weather-icon3" src="" alt="" />
+                <p id="day3">Load</p>
+                <h2 id="tempday3">***</h2>
+              </div>
+            </a>
+            <a href="./indexx.html" target="_blank">
+              <div class="weatherCard">
+                <img id="weather-icon4" src="" alt="" />
+                <p id="day4">Load</p>
+                <h2 id="tempday4">***</h2>
+              </div>
+            </a>
+            <a href="./indexx.html" target="_blank">
+              <div class="weatherCard">
+                <img id="weather-icon5" src="" alt="" />
+                <p id="day5">Load</p>
+                <h2 id="tempday5">***</h2>
+              </div>
+            </a>
+          </div>
+          <!--  -->
+          <button class="weatherButton" id="get-weather-button">
+            <h1>Change location</h1>
+          </button>
+          <div id="location-div">
+            <input type="text" id="change-location-inp">
+            <button id="change-location-but">Accept</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="container">
+      <form>
+          <input type="text" id="city-name-input" class="bordered-block">
+          <button id="get-weather-btn" class="bordered-block">Get weather</button>
+      </form>
+      <div class="weather">
+          <div class="weather-description-wrapper">
+              <p id="weather-description" class="weather-data"></p>
+              <img src="" alt="" id="weather-icon">
+          </div>
+          <p id="temperature" class="weather-data"></p>
+          <p id="wind-speed" class="weather-data"></p>
+      </div>
+  </div> -->
+  </body>
+  <script src="./script.js"></script>
+</html>
